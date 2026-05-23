@@ -81,37 +81,25 @@
 /* ========================= */
 /* 🌕 LIGHT MODE BUTTON (dark text) */
 /* ========================= */
-/* Override for hero — white border on dark bg */
 .fancy.light {
-  border-color: #fff;
-  color: #fff;
+  border-color: #000;
+  color: #000;
 }
 
 .fancy.light .text {
-  color: #fff;
+  color: #000;
 }
 
 .fancy.light::before {
-  background: #fff;
-}
-
-.fancy.light:hover {
-  background: #fff;
-  color: #000;
-}
-
-.fancy.light:hover .text {
-  color: #000;
-}
-
-.fancy.light:hover::before {
   background: #000;
 }
+
 /* ========================= */
 /* 🌑 DARK MODE BUTTON (white text) */
+/* ========================= */
 .fancy.dark {
-  background: transparent;
-  border-color: #fff;
+  background: #000;
+  border-color: #000;
   color: #fff;
 }
 
@@ -126,20 +114,7 @@
 .fancy.dark .top-key,
 .fancy.dark .bottom-key-1,
 .fancy.dark .bottom-key-2 {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.fancy.dark:hover {
-  background: #fff;
-  color: #000;
-}
-
-.fancy.dark:hover .text {
-  color: #000;
-}
-
-.fancy.dark:hover::before {
-  background: #000;
+  background: #ffffff33;
 }
 
 /* ========================= */
