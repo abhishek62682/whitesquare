@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WHITE SQUARE INTERIORS | Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/index.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @font-face {
+        font-family: Melodrama;
+        src: url(./font/fon.woff2);
+      }
+      @theme {
+        --font-primary: "Bricolage Grotesque", sans-serif;
+        --font-secondary: "Inter", sans-serif;
+        --font-accent: Melodrama;
+      }
+    </style>
+
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+      }
+
+
+      body{
+        overflow-x: hidden;
+      }
+
+      /* ── Responsive Hero Text ── */
+      .hero-text-left {
+        font-size: clamp(48px, 10vw, 202px);
+        line-height: 1;
+      }
+      .hero-text-right {
+        font-size: clamp(48px, 10vw, 202px);
+        line-height: 1;
+        text-align: right;
+      }
+
+      /* ── Responsive About Heading ── */
+      .about-heading {
+        font-size: clamp(32px, 5vw, 65px);
+        line-height: 1.1;
+      }
+
+      /* ── Responsive Service Heading ── */
+      .service-heading {
+        font-size: clamp(32px, 5vw, 65px);
+        line-height: 1.1;
+      }
+
+      /* ── Responsive Project Heading ── */
+      .project-heading {
+        font-size: clamp(32px, 5vw, 65px);
+        line-height: 1.1;
+      }
+
+      /* ── Responsive CTA Heading ── */
+      .cta-heading {
+        font-size: clamp(36px, 7vw, 80px);
+        line-height: 1.05;
+      }
+
+      /* ── Service Card heading ── */
+      .service-card-title {
+        font-size: clamp(28px, 3.5vw, 48px);
+        line-height: 1.1;
+      }
+
+      /* ── Mobile nav ── */
+      @media (max-width: 640px) {
+        .nav-logo {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        .nav-contact {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      /* ── Mobile hero info block ── */
+      @media (max-width: 768px) {
+        .hero-info-block {
+          display: none;
+        }
+        .hero-desc-block {
+          max-width: 100%;
+        }
+        .hero-bottom-row {
+          flex-direction: column;
+          gap: 24px;
+          align-items: flex-start;
+        }
+        .hero-bottom-row .hero-text-right {
+          text-align: left;
+        }
+      }
+
+      /* ── About section mobile ── */
+      @media (max-width: 768px) {
+        .about-grid {
+          flex-direction: column !important;
+        }
+        .about-left {
+          width: 100% !important;
+          max-height: 300px;
+          overflow: hidden;
+        }
+        .about-right {
+          width: 100% !important;
+        }
+        .about-top-imgs {
+          flex-direction: column;
+        }
+        .about-top-imgs > div {
+          width: 100% !important;
+          max-height: 200px;
+          overflow: hidden;
+        }
+      }
+
+     
+
+      /* ── Swiper responsive ── */
+      @media (max-width: 640px) {
+        .project-header {
+          flex-direction: column;
+          gap: 16px;
+          align-items: flex-start !important;
+        }
+      }
+
+      /* ── Footer responsive ── */
+      @media (max-width: 768px) {
+        .footer-root {
+          height: auto !important;
+          padding: 60px 24px !important;
+        }
+        .footer-big-text {
+          font-size: 18vw;
+        }
+      }
+
+      /* ── CTA section ── */
+      @media (max-width: 640px) {
+        .cta-section {
+          padding-top: 60px;
+        }
+        .cta-inner {
+          padding: 0 20px 48px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+
+   <div class="loader-wrapper bg-black fixed inset-0 z-[999] w-full h-screen overflow-hidden">
+  <div class="loader w-full h-full flex flex-col">
+    
+    <!-- TOP -->
+    <div class="loader-top bg-white flex-1 flex justify-center items-end overflow-hidden px-4">
+      <h2
+        class="loader-text font-primary text-black font-
+        text-[42px]
+        sm:text-[60px]
+        md:text-[90px]
+        lg:text-[129px]
+        leading-none
+        text-center
+        break-words"
+      >
+       WHITE SQUARE
+      </h2>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="loader-bottom bg-white flex-1"></div>
+
+  </div>
+</div>
+
+   <header class="h-screen flex flex-col relative">
+
+  <!-- BG IMAGE + OVERLAY -->
+  <div class="absolute inset-0 z-0">
+    <img class="w-full h-full object-cover" src="https://images.livspace-cdn.com/w:3840/plain/https://d3gq2merok8n5r.cloudfront.net/abhinav/ond-1634120396-Obfdc/di-2026-1769081758-Ayx2Q/amj-1774778677-BA1IA/living-room-1775038355-19FGr/45-1775456328-5jtVP.jpg" alt="" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/60"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="w-full fixed top-0 left-0 z-[200] pt-6 pb-5">
+    <div class="px-5 h-9 flex justify-between text-white items-center w-full">
+
+      <div class="hamburger flex flex-col w-fit gap-0.5">
+        <div class="inline-block rounded-[4px] w-3 h-1 bg-white"></div>
+        <div class="inline-block rounded-[4px] w-6 h-1 bg-white"></div>
+        <div class="inline-block ml-auto rounded-[4px] w-3 h-1 bg-white"></div>
+      </div>
+
+      <div>
+        <a class="nav-logo font-primary text-[30px] leading-[36px] font-normal text-white drop-shadow-lg" href="">WHITE SQUARE</a>
+      </div>
+
+      <a class="nav-contact text-[18px] leading-[24px] font-light font-primary text-white drop-shadow-md" href="">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO BODY -->
+  <div class="relative z-10 flex-1 flex flex-col justify-between pt-[100px] pb-[50px]">
+
+    <!-- TOP ROW -->
+    <div class="px-5 flex items-center justify-between gap-4 flex-wrap">
+
+      <h2 class="hero-text-left text-white uppercase font-accent font-medium drop-shadow-xl">
+        Interior
+      </h2>
+
+      <div class="hero-info-block text-white max-w-[200px] space-y-6">
+        <div class="group-img flex">
+          <div class="size-[28px] border-2 rounded-full border-[#ccc]">
+            <img class="w-full h-full rounded-full bg-white" src="https://framerusercontent.com/images/8ZZpJpvQo1vw6ej1DW9WcGvSszA.png?width=360&height=360" alt="" />
+          </div>
+          <div class="size-[28px] -ml-2 border-2 rounded-full border-[#ccc]">
+            <img class="w-full h-full object-cover rounded-full bg-white" src="https://images.unsplash.com/flagged/photo-1571367034861-e6729ad9c2d5?q=80&w=1064&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="size-[28px] -ml-2 border-2 rounded-full border-[#ccc]">
+            <img class="w-full h-full object-cover rounded-full bg-white" src="https://plus.unsplash.com/premium_photo-1682089869602-2ec199cc501a?q=80&w=2070&auto=format&fit=crop" alt="" />
+          </div>
+          <div class="size-[28px] -ml-2 border-2 rounded-full border-[#ccc]">
+            <img class="w-full h-full object-cover rounded-full bg-white" src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?q=80&w=2070&auto=format&fit=crop" alt="" />
+          </div>
+        </div>
+        <p class="text-[16px] font-primary font-normal leading-[22px] text-white drop-shadow-md">
+          Trusted by 150+ clients across residential and commercial projects
+        </p>
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="px-5 flex hero-bottom-row justify-between items-end">
+
+      <div class="hero-desc-block max-w-[400px] space-y-6">
+        <p class="text-[16px] font-primary font-normal leading-[22px] text-white drop-shadow-md">
+          WHITE SQUARE designs elegant, functional, timeless interiors—transforming spaces into reflections of your lifestyle.
+        </p>
+        <a class="fancy light font-primary" href="#">
+          <span class="top-key"></span>
+          <span class="text">View Our Work</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+
+      <h2 class="hero-text-right text-white uppercase font-accent font-medium drop-shadow-xl">Designer</h2>
+    </div>
+
+  </div>
+</header>
+
+    <!-- ════════════ MAIN CONTENT ════════════ -->
+    <div class="main-content">
+
+      <!-- ── ABOUT ── -->
+      <div class="about-section py-20">
+        <div class="px-5 flex flex-col gap-[56px]">
+
+          <h2 class="about-heading font-accent px-4 sm:px-7 font-semibold">
+            We Design Spaces <br />_With Purpose
+          </h2>
+
+          <div class="about-grid w-full flex gap-10">
+
+            <div class="about-left w-1/3">
+              <img class="w-full h-full"
+                src="https://framerusercontent.com/images/UFnLvcGbQme2dbxtmn6dg30neI.png?width=1734&height=1644" alt="" />
+            </div>
+
+            <div class="about-right flex gap-10 flex-col w-2/3">
+              <div class="about-top-imgs top flex-1 flex gap-10">
+                <div class="w-1/2">
+                  <img class="w-full h-full object-cover"
+                    src="https://framerusercontent.com/images/nzFuu6uDjrh5ULpmjIfCUd3ML90.png?width=1008&height=720" alt="" />
+                </div>
+                <div class="w-1/2">
+                  <img class="w-full h-full object-cover"
+                    src="https://framerusercontent.com/images/Xgl0uBb8MxHxaJBaPf6YYgXkGA8.png?scale-down-to=1024&width=1146&height=720" alt="" />
+                </div>
+              </div>
+
+              <div class="flex-1 space-y-5">
+                <p class="leading-[22px] text-[#454545] font-primary text-[16px]">
+                  At white square, we believe interior design is more than decoration. It is about creating a meaningful experience. Every space should reflect the people who live or work inside it.
+                </p>
+                <p class="leading-[22px] text-[#454545] font-primary text-[16px]">
+                  Our team combines creativity, functionality, and strategy to design interiors that are beautiful and practical. From concept to final styling, we guide you through every step with clarity and care.
+                </p>
+                <a class="fancy font-primary " href="#">
+                  <span class="top-key"></span>
+                  <span class="text">About Us</span>
+                  <span class="bottom-key-1"></span>
+                  <span class="bottom-key-2"></span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SERVICES ── -->
+      <div class="service-section py-20">
+        <div class="flex flex-col gap-[56px]">
+
+          <h2 class="service-heading font-accent px-4 sm:px-7 font-semibold">
+            Our Interior <br />_Design Services
+          </h2>
+
+          <div class="services-pin-wrap spacing h-[300vh] bg-red-900">
+            <div class="services-sticky sticky top-0 left-0 w-full bg-[#faf5ea] flex h-screen overflow-hidden">
+
+              <!-- LEFT IMAGES -->
+             <div class="services-left w-1/2 h-full relative hidden lg:block">
+
+                <img class="service-image w-full absolute top-0 left-0 h-full object-cover"
+                  src="https://framerusercontent.com/images/pPlK9t2OAUqkXtWCjeL2NvUig.png?width=1384&height=1350" alt="" />
+                <img class="service-image w-full absolute top-0 left-0 h-full object-cover"
+                  src="https://framerusercontent.com/images/XOyalbAstTi0F2RrzmSdQAt9g.png?width=1384&height=1350" alt="" />
+                <img class="service-image w-full absolute top-0 left-0 h-full object-cover"
+                  src="https://framerusercontent.com/images/yBz1aEftoLizQRGZ3a6DqzxHOG4.png?scale-down-to=2048&width=2160&height=2418" alt="" />
+              </div>
+
+              <!-- RIGHT CONTENT -->
+              <div class="services-right w-full lg:w-1/2 relative">
+
+
+                <!-- CARD 1 -->
+                <div class="service-card w-full bg-[#faf5ea] absolute top-0 left-0 h-full flex justify-center items-center">
+                  <div class="content text-center w-full max-w-[380px] flex flex-col gap-7 px-4">
+
+                    <div class="service-top flex items-center gap-6 flex-col">
+                      <h3 class="service-card-title font-accent">CUSTOM FURNITURE <br />& SPACE PLANNING</h3>
+                      <img class="w-[214px] h-[320px] object-cover"
+                        src="https://framerusercontent.com/images/hCqSETUVDySdRnwiICUhJVbhYaU.png?width=428&height=640" alt="" />
+                    </div>
+                    <div class="service-bottom flex flex-col items-center gap-8">
+                      <p class="text-[#454545] font-primary text-[14px] leading-[20px]">
+                        From early planning to final arrangement, we carefully organize spaces to maximize functionality, improve flow, and ensure every area is used efficiently.
+                      </p>
+                      <a class="fancy font-primary light" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">View More</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="service-card w-full bg-[#faf5ea] absolute top-0 left-0 h-full flex justify-center items-center">
+                  <div class="content text-center w-full max-w-[380px] flex flex-col gap-7 px-4">
+
+                    <div class="service-top flex items-center gap-6 flex-col">
+                      <h3 class="service-card-title font-accent">COMMERCIAL <br />INTERIOR DESIGN</h3>
+                      <img class="w-[214px] h-[320px] object-cover"
+                        src="https://framerusercontent.com/images/8aK8881ntw06PT6YHe9R65nhO3A.png?width=428&height=640" alt="" />
+                    </div>
+                    <div class="service-bottom flex flex-col items-center gap-8">
+                      <p class="text-[#454545] font-primary text-[14px] leading-[20px]">
+                        From concept development to project completion, we craft commercial spaces that enhance brand identity, create a memorable experience for clients and visitors.
+                      </p>
+                      <a class="fancy font-primary light" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">View More</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="service-card w-full bg-[#faf5ea] absolute top-0 left-0 h-full flex justify-center items-center">
+                  <div class="content text-center w-[380px] flex flex-col gap-7 px-4">
+                    <div class="service-top flex items-center gap-6 flex-col">
+                      <h3 class="service-card-title font-accent">RESIDENTIAL <br />INTERIOR DESIGN</h3>
+                      <img class="w-[214px] h-[320px] object-cover"
+                        src="https://framerusercontent.com/images/G7IfHclsx594RqlJIQHduWzLXtU.png?width=472&height=638" alt="" />
+                    </div>
+                    <div class="service-bottom flex flex-col items-center gap-8">
+                      <p class="text-[#454545] font-primary text-[14px] leading-[20px]">
+                        From initial ideas to the final touches, we design residential interiors that combine comfort, elegance, and functionality to create a home that truly reflects.
+                      </p>
+                      <a class="fancy font-primary light" href="#">
+                        <span class="top-key"></span>
+                        <span class="text">View More</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── RECENT PROJECTS ── -->
+      <div class="py-20">
+        <div class="flex flex-col gap-[56px]">
+
+          <!-- Heading + Nav -->
+          <div class="project-header flex items-end justify-between px-4 sm:px-7 gap-4 flex-wrap">
+            <h2 class="project-heading font-accent font-semibold">
+              White Square <br />_Recent Projects
+            </h2>
+            <div class="flex gap-3 pb-3">
+              <button class="swiper-btn-prev w-[46px] h-[46px] rounded-full bg-[#111] flex items-center justify-center cursor-pointer hover:bg-[#333] transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"/>
+                </svg>
+              </button>
+              <button class="swiper-btn-next w-[46px] h-[46px] rounded-full bg-[#111] flex items-center justify-center cursor-pointer hover:bg-[#333] transition-colors">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Swiper -->
+          <div class="w-full overflow-hidden">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/OS0vLIkBccXdFtKLUYz9LSboPoM.png?scale-down-to=1024&width=1320&height=1181" alt="Azure Hallway" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Azure Hallway</div>
+                      <div class="year font-primary">2025</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Oceanic</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Natural Light</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/pPlK9t2OAUqkXtWCjeL2NvUig.png?width=1160" alt="Coastal Serenity" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Coastal Serenity</div>
+                      <div class="year font-primary">2024</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Minimalism</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Natural</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/OoAkgBGDgZidGcwKViOF16XkWYU.png?scale-down-to=1024&width=1278&height=1021" alt="Warm Residence" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Warm Residence</div>
+                      <div class="year font-primary">2024</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Residential</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Warm Tones</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/DReasdKfjVfLYvJEvjvSpvXoNg.png?scale-down-to=1024&width=1320&height=832" alt="Studio Noir" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Studio Noir</div>
+                      <div class="year font-primary">2025</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Commercial</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Editorial</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/si4iYabsjJlA991YvRWgl9T4pn8.png?scale-down-to=1024&width=1320&height=832" alt="Garden Suite" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Garden Suite</div>
+                      <div class="year font-primary">2023</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Residential</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Biophilic</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide space-y-4 p-3 rounded-[12px] bg-[#faf5ea]">
+                  <div class="card-img rounded-[12px] overflow-hidden">
+                    <img src="https://framerusercontent.com/images/hCqSETUVDySdRnwiICUhJVbhYaU.png?width=1160" alt="Ivory Atelier" class="w-full h-full object-cover"/>
+                  </div>
+                  <div class="card-meta flex items-center gap-3 justify-between flex-wrap">
+                    <div class="meta-left space-y-2">
+                      <div class="name text-[32px] leading-[28px] font-accent">Ivory Atelier</div>
+                      <div class="year font-primary">2023</div>
+                    </div>
+                    <div class="tags flex gap-2 flex-wrap">
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Custom</span>
+                      <span class="tag border border-[#afab9f] rounded-[40px] inline-block text-[12px] px-2 py-1 leading-[17px]">Artisan</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ════════════ CTA SECTION ════════════ -->
+    <div class="cta-section relative pt-[100px] overflow-hidden">
+      <img class="absolute top-0 left-0 w-full h-full object-cover"
+        src="https://framerusercontent.com/images/ZtCNSZxxeGWdJqqVi3rZ3n0rAw.png?width=1376&height=768" alt="">
+
+      <div class="absolute inset-0 z-[1] flex flex-row flex-nowrap items-center justify-center gap-[10px] w-full p-0 overflow-clip"
+        style="background: linear-gradient(180deg, #10101499 0%, #101014 100%);"></div>
+
+      <div class="cta-inner relative gap-7 text-center z-10 flex flex-col justify-end items-center mx-auto h-full px-6 sm:px-10 pb-12 text-white">
+        <h2 class="cta-heading font-accent font-semibold mb-3">
+          Ready to Transform <br> Your Space?
+        </h2>
+        <p class="text-base sm:text-lg max-w-[600px] text-white/65 leading-relaxed mb-7">
+          Every great space starts with a single conversation. Let's talk about your vision and bring it to life together.
+        </p>
+        <a class="fancy font-primary dark" href="#">
+          <span class="top-key"></span>
+          <span class="text">BOOK A CONSULTATION</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </a>
+      </div>
+    </div>
+
+   <footer class="footer-root bg-[#101015] text-white px-6 sm:px-10 md:px-[60px] py-12 sm:py-16 md:py-20 w-full flex flex-col gap-10 sm:gap-14 md:gap-16">
+
+  <!-- TOP -->
+  <div class="flex flex-col md:flex-row justify-between gap-8 md:gap-10">
+    <div class="flex flex-col gap-3 font-primary text-white/80">
+      <p class="hover:text-white transition max-w-[400px]">Shop no 105, Nandanvan Complex, above yamaha showroom, near Orion Mall, HOC Colony, Panvel, Maharashtra 410206</p>
+      <p class="hover:text-white transition">
+        +91 7972984087</p>
+    </div>
+    <div class="flex flex-col gap-3 text-white/80">
+      <p class="text-white font-medium">Get in Touch</p>
+      <p class="hover:text-white transition">abhishekreact.dev@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- MID LINKS -->
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-t border-white/10 pt-8 sm:pt-10">
+    <ul class="flex flex-wrap gap-5 sm:gap-7 text-white/70">
+      <li class="hover:text-white cursor-pointer transition">Home</li>
+      <li class="hover:text-white cursor-pointer transition">Services</li>
+      <li class="hover:text-white cursor-pointer transition">About Us</li>
+      <li class="hover:text-white cursor-pointer transition">Projects</li>
+    </ul>
+    <ul class="flex gap-5 sm:gap-7 text-white/70">
+      <li class="hover:text-white cursor-pointer transition">Facebook</li>
+      <li class="hover:text-white cursor-pointer transition">Instagram</li>
+      <li class="hover:text-white cursor-pointer transition">Twitter</li>
+    </ul>
+  </div>
+
+  <!-- BIG TEXT -->
+  <h2 class="footer-big-text text-[14vw] leading-none flex justify-center text-white tracking-tight">
+    <span>WHITE</span>
+    <span class="ml-4 sm:ml-6">SQUARE</span>
+  </h2>
+
+  <!-- BOTTOM -->
+  <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-white/60 text-sm border-t border-white/10 pt-8 sm:pt-10">
+    <p>© 2026 WhiteSquare. All rights reserved.</p>
+    <ul class="flex flex-wrap justify-center gap-4 sm:gap-6">
+      <li class="hover:text-white transition">Privacy Policy</li>
+      <li class="hover:text-white transition">Terms of Service</li>
+      <li class="hover:text-white transition">Cookie Policy</li>
+    </ul>
+  </div>
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+    <script src="./js/loader.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        centeredSlides: true,
+        loop: true,
+        speed: 520,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".swiper-btn-next",
+          prevEl: ".swiper-btn-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1.3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 1.6,
+            spaceBetween: 24,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+          }
+        }
+      });
+
+
+  
+    </script>
+  </body>
+</html>
