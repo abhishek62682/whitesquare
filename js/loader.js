@@ -140,8 +140,8 @@ tl.to(".fake-image:last-child", {
   scrollTrigger: {
     trigger: ".footer-big-text",
     start: "top 80%",
-    end:"50% 50%",
-    
+    end:"50% 70%",
+    // markers:true,
     scrub:2
   },
 });
